@@ -13,5 +13,18 @@ namespace CookiesDataTransfer
         {
 
         }
+
+        protected void btnWebform2_Click(object sender, EventArgs e)
+        {
+            HttpCookie cookie = new HttpCookie("UserInfo");
+            cookie["Name"] = txtName.Text;
+            cookie["Email"] = txtEmail.Text;
+            cookie.Expires = DateTime.Now.AddDays(30);
+
+            Response.Cookies.Add(cookie);
+            Response.Redirect("WebForm2.aspx");
+
+
+        }
     }
 }

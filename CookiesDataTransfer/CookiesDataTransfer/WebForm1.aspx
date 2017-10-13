@@ -35,7 +35,7 @@
                 <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox></td></tr>
                <tr>
                    <td colspan="2">
-                       <asp:Button ID="btnWebform2" runat="server" Text="DataSend to Webform2"  />
+                       <asp:Button ID="btnWebform2" runat="server" Text="DataSend to Webform2" OnClick="btnWebform2_Click"  />
 
                    </td>
                </tr>

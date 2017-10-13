@@ -11,7 +11,13 @@ namespace CookiesDataTransfer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            HttpCookie cookie= Request.Cookies["UserInfo"];
+            if(cookie!=null)
+            {
+                lblName.Text = cookie["Name"];
+                lblEmail.Text = cookie["Email"];
 
+            }
         }
     }
 }
